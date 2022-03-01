@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Liverpool Bass School</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/icon.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="#prices">Prices</a></li>
+                        <li><a href="#media">Media</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="text-box">
+                <h1>Liverpool Bass School</h1>
+                <h2>Upgrade Your Bass Skills</h2>
+                <p>Take your bass playing to the next level by completing your bass grades with an experienced Grade 8 tutor.<br><br>Completing your grades not only gives you the technical and theoretical skills to excel in a band or ensemble, but also awards you valuable credits for UCAS applications.</p>
+                <a href="#contact" class="hero-btn">Book your lesson</a>
+            </div>
+        </section>
+
+    <!------Prices------>
+    <section class="prices">
+        <h2 id="prices">Prices</h2>
+        <p>Lessons take place one-to-one online via Zoom from the comfort of your own home. Sessions last one hour and are structured around your goals and music taste.
+            <br><br>
+            The first lesson is half price and will be a discussion of what you want to achieve with your bass playing followed by an assessment of your current skill level.</p>
+
+        <div class="row">
+            <div class="prices-col">
+                <h3>Online: grades</h3>
+                <p>We will go through the RSL syllabus at the level you need to progress your playing, complete your goals and excel through the grades.</p>
+                <h4>£25 per hour</h4>
+            </div>
+            <div class="prices-col">
+                <h3>Online: casual</h3>
+                <p>Lets hang out and play bass! Whether you're starting out or have years of experience, this is the option for you if you want to learn in a looser structure.</p>
+                <h4>£20 per hour</h4>
+            </div>
+            <div class="prices-col">
+                <h3>In-person</h3>
+                <p>Due to the COVID-19 pandemic I am not currently taking students for in-person lessons. Hopefully this situation will change soon!</p>
+                <h4>Soon!</h4>
+            </div>
+        </div>
+    </section>
+
+    <!------ media ------>
+
+
+    <section class="media">
+        <div class= "media-text">
+        <h2 id="media">Media</h2>
+        <p>Get a taste of my playing by checking out some of my performances.</p>
+
+        <div class="row">
+            <div class="media-col">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/aLjJk6QSMwE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="layer">
+                    <h3>Kool and the Gang -<br>Summer Madness</h3>
+                </div>
+            </div>
+            <div class="media-col">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/PK5axwpwh-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="layer">
+                    <h3>Narrow Alps -<br>Cause You No Pain</h3>
+                </div>
+            </div>
+            <div class="media-col">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/zgwRvU2k_t8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="layer">
+                    <h3>Sweet Departure -<br>Funk and soul medley</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!------JavaScript for Toggle Menu------>
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+
+    </body>
+</html>
+
+<!--- Call to Action --->
+
+<section class="cta">
+    <div class="cta-text">
+    <h2 id="contact">Book your first lesson or find out more</h2>
+    </div>
+    <div class="contact-form">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email address" required>
+            <input type="text" id="phone" placeholder="Phone number" required>
+            <textarea id="message" rows="4" placeholder="Tell us a bit about you"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                SecureToken: "4797fdf0-e42d-4275-8555-2843f469d49f",
+                To : 'andrewparkinson89@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "Liverpool Bass School enquiry",
+                Body : "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone number: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message sent successfully. We aim to respond to all enquiries within 24 hours.")
+            );
+        }
+    </script>
+</section>
+
+<!--- Footer --->
+
+<section class="footer">
+    <div class="footer-text">
+    <h3>About</h3>
+    <p>© Andrew Parkinson, 2022</p>
+    <div class="icons">
+        <a href="mailto: andrewparkinson89@gmail.com?subject=Liverpool Bass School Enquiry"><i class="fa fa-envelope-open"></i></a>
+        <a href="https://www.google.com/maps/place/Sefton+Park/@53.384336,-2.9457071,15.1z/data=!4m5!3m4!1s0x487b2059258730ad:0xc3ed24717d6529b!8m2!3d53.382932!4d-2.9370353" target="_blank"><i class="fa fa-map-marker"></i></a>
+    </div>
+    </div>
+</section>
