@@ -7,7 +7,7 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/banner.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('images/banner-web.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
@@ -33,7 +33,7 @@ nav img{
 .nav-links ul li {
     list-style: none;
     display: inline-block;
-    padding: 8px 12px;
+    padding: 10px 12px;
     position: relative;
 }
 
@@ -68,15 +68,19 @@ nav img{
 }
 
 .text-box h1{
-    font-size: 100px;
+    font-size: 82px;
+    line-height: 0.6;
+    margin: 10px 0 20px;
 }
 
 .text-box h2{
     font-size: 60px;
+    line-height: 0.6;
+    margin: 10px 0 20px;
 }
 
 .text-box p{
-    margin: 10px 0 40px;
+    margin: 10px 0 20px;
     font-size: 34px;
     color: #fff;
 }
@@ -87,7 +91,7 @@ nav img{
     color: #fff;
     border: 1px solid #fff;
     padding: 12px 34px;
-    font-size: 38px;
+    font-size: 32px;
     background: transparent;
     position: relative;
     cursor: pointer;
@@ -104,26 +108,23 @@ nav .fa{
     display: none;
 }
 
-@media(max-width: 700px){
+@media(max-width: 800px){
     nav img{
         width: 50px;
         padding: 10px 0 10px;
     }
     .text-box h1{
-        font-size: 75px;
-        line-height: 60px;
-        padding: 0 0 0.3em;
+        font-size: 55px;
+        line-height: 0.6;
     }
     .text-box h2{
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 40px;
     }
     .text-box {
         width: 70%;
     }
     .text-box p{
         font-size: 30px;
-        line-height: 30px;
     }
     .nav-links ul li {
         display: block;
@@ -187,7 +188,7 @@ h2 {
 
 p {
     color: #777;
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
@@ -211,14 +212,14 @@ p {
 
 h3{
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     margin: 10px 0;
 }
 
 h4{
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     margin: 10px 0;
 }
@@ -226,10 +227,9 @@ h4{
 
 .prices-col:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
-    cursor: pointer;
 }
 
-@media(max-width: 700px){
+@media(max-width: 800px){
     .row{
         flex-direction: column;
     }
@@ -237,8 +237,8 @@ h4{
         width: 70%;
     }
     h2{
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 40px;
+        line-height: 40px;
     }
     p{
         font-size: 30px;
@@ -285,23 +285,27 @@ h4{
     display: block;
 }
 
-@media(max-width: 700px){
+@media(max-width: 800px){
     iframe{
         height: 250;
     }
     .media-text h2{
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .media-text h3{
+        font-size: 30px;
+        line-height: 30px;
     }
 }
 
-/*--- Call to action ---*/
+/*--- Call to Action ---*/
 
 .cta{
     margin: 100px auto;
     width: 80%;
     max-height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/contact.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/contact-web.jpg');
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -311,9 +315,9 @@ h4{
 
 .cta h2{
     color: #fff;
-    line-height: 50px;
-    padding: 0;
-    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 0.6;
+    margin: 10px 0 20px;
 }
 
 .contact-form{
@@ -367,9 +371,9 @@ form button:hover{
 }
 
 
-@media(max-width: 700px){
+@media(max-width: 800px){
     .cta h2{
-        font-size: 50px;
+        font-size: 40px;
         text-align: center;
     }
     .contact-form input {
