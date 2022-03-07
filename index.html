@@ -32,6 +32,19 @@
             </div>
         </section>
 
+        <!------JavaScript for Toggle Menu------>
+        <script>
+
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+    
+        </script>
+
     <!------Prices------>
     <section class="prices">
         <h2 id="prices">Prices</h2>
@@ -89,22 +102,6 @@
         </div>
     </section>
 
-    <!------JavaScript for Toggle Menu------>
-    <script>
-
-        var navLinks = document.getElementById("navLinks");
-        function showMenu(){
-            navLinks.style.right = "0";
-        }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
-        }
-
-    </script>
-
-    </body>
-</html>
-
 <!--- Call to Action --->
 
 <section class="cta">
@@ -119,6 +116,9 @@
             <button type="submit">Send</button>
         </form>
     </div>
+
+<!--- Javascript for contact form --->
+
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         function sendEmail(){
@@ -150,3 +150,6 @@
     </div>
     </div>
 </section>
+
+</body>
+</html>

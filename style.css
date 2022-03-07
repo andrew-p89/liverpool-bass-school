@@ -21,8 +21,8 @@ nav {
 }
 
 nav img{
-    width: 100px;
-    padding-top: 10px;
+    width: 80px;
+    padding-top: 15px;
 }
 
 .nav-links {
@@ -40,7 +40,7 @@ nav img{
 .nav-links ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 38px;
+    font-size: 30px;
 }
 
 .nav-links ul li::after{
@@ -204,7 +204,7 @@ p {
     flex-basis: 31%;
     background: #eee8e6;
     border-radius: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 20px;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
@@ -215,6 +215,7 @@ h3{
     font-size: 30px;
     font-weight: 600;
     margin: 10px 0;
+    line-height: 0.6;
 }
 
 h4{
@@ -251,7 +252,6 @@ h4{
     width: 100%;
     margin: auto;
     text-align: center;
-    padding: 50px 0;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
 }
 
@@ -260,7 +260,7 @@ h4{
     color: white;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
+    padding: 50px 0 30px;
 }
 
 .media-text p{
@@ -403,7 +403,6 @@ form button:hover{
     color: white;
     margin: auto;
     text-align: center;
-    padding: 50px 0;
 }
 
 .footer-text p{
